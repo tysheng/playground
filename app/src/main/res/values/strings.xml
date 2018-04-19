@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">TestCase</string>
+    <string name="title_activity_dagger2">Dagger2Activity</string>
+    <string name="title_activity_shader">ShaderActivity</string>
+    <string name="title_activity_touch">TouchActivity</string>
+
+
+    <string name="share_pray_card_1">Check out prayer times for %1$s %2$s at Muslim Ummah %3$s #MuslimUmmah</string>
+
+    <string name="share_pray_card_2">Check out prayer times for %1$s %2$s: %3$s %4$s #MuslimUmmah</string>
+    <string name="share_verse_day_1">Read this beautiful quote from the Holy Quran at %1$s #MuslimUmmah</string>
+    <string name="share_verse_day_2">Read this beautiful quote from the Holy Quran at %1$s #MuslimUmmah</string>
+    <string name="share_photo_day_1">%1$s %2$s #MuslimUmmah</string>
+    <string name="share_photo_day_2">Check out this beautiful photo at Muslim Ummah. %1$s %2$s #MuslimUmmah</string>
+    <string name="share_single_verse_1">Check out this amazing feature at Muslim Ummah %1$s #MuslimUmmah</string>
+    <string name="share_single_verse_2">Check out this amazing feature at Muslim Ummah %1$s #MuslimUmmah</string>
+
+    <string name="share_single_word_1">Come join me to learn Arabic at Muslim Ummah %1$s #MuslimUmmah</string>
+    <string name="share_single_word_2">Check out this amazing feature at Muslim Ummah %1$s #MuslimUmmah</string>
+    <string name="title_activity_water_mark">WaterMarkActivity</string>
+</resources>

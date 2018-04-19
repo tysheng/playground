@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <paths>
+        <external-path name="apkDir" path="e0575" />
+        <files-path name="camera_images" path="." />
+        <external-path name="external_files" path="." />
+
+        <!--bugly-->
+        <!-- /storage/emulated/0/Download/${applicationId}/.beta/apk-->
+        <external-path name="beta_external_path" path="Download/" />
+        <!--/storage/emulated/0/Android/data/${applicationId}/files/apk/-->
+        <external-path name="beta_external_files_path" path="Android/data/" />
+        <files-path path="/" name="allfiles" />
+    </paths>
+</resources>

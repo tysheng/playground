@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tysheng.playground">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDh1YfF-xJ5tiplQS29YmT13QmBOaHrGP8" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="549b3848b6a1b0eb324f17e9bfcab1a6d540a6df" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".dagger.Dagger2Activity"
+            android:label="@string/title_activity_dagger2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".shader.ShaderActivity"
+            android:label="@string/title_activity_shader"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".selecttextview.SelectTextActivity" />
+        <activity
+            android:name=".touch.TouchActivity"
+            android:label="@string/title_activity_touch"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".share.ShareActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.tysheng.playground"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/path" />
+        </provider>
+
+        <activity android:name=".scroll.ScrollActivity" />
+        <activity
+            android:name=".watermark.WaterMarkActivity"
+            android:label="@string/title_activity_water_mark"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".imagecache.ImageCacheActivity" />
+        <activity android:name=".png.PngActivity" />
+        <activity android:name=".edittext.EditTextActivity" />
+        <activity android:name=".db_image.DBImageActivity" />
+        <activity android:name=".rx_broadcast.RxBroadcastActivity" />
+        <activity android:name=".edittextstyle.EditTextStyleActivity" />
+        <activity android:name=".dao_delete.DeleteActivity" />
+        <activity android:name=".scroll_rv.ScrollRvActivity" />
+        <activity android:name=".unique.UniqueActivity" />
+        <activity android:name=".optionbutton.GameActivity" />
+        <activity android:name=".anim.AnimActivity" />
+        <activity android:name=".arch.ArchActivity"></activity>
+        <activity android:name=".KtActivity" />
+        <activity android:name=".support.SupportActivity" />
+
+        <service android:name=".MyService" />
+    </application>
+
+</manifest>
