@@ -11,6 +11,7 @@ import com.tysheng.playground.R;
 
 import javax.inject.Inject;
 
+import dagger.android.AndroidInjection;
 import timber.log.Timber;
 
 public class Dagger2Activity extends AppCompatActivity {
@@ -29,6 +30,7 @@ public class Dagger2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dagger2);
 
+        AndroidInjection.inject(this);
 
         daggerViewModel = ViewModelProviders.of(this).get(DaggerViewModel.class);
 
@@ -45,10 +47,6 @@ public class Dagger2Activity extends AppCompatActivity {
                 Timber.d("num is %d  view model count %d", holder.num, daggerViewModel.count);
             }
         });
-        DaggerFooComponent.builder()
-                .module(new Module(this))
-                .build()
-                .inject(this);
         Timber.d("onCreate savedInstanceState == null %b, %d,  view model %d", savedInstanceState == null, holder.num, daggerViewModel.count);
         Timber.d("holder instance %d", holder.hashCode());
 

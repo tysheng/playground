@@ -1,7 +1,5 @@
 package com.tysheng.playground.dagger;
 
-import android.content.Context;
-
 import javax.inject.Singleton;
 
 import dagger.Component;
@@ -12,8 +10,9 @@ import dagger.Component;
  * Email: tyshengsx@gmail.com
  */
 @Singleton
-@Component(modules = Module.class)
+@Component(modules = {Module.class})
 public interface FooComponent {
-    Context context();
-    void inject(Dagger2Activity a);
+
+//    Dagger2Activity activity();
+//    void inject(Dagger2Activity a);
 }

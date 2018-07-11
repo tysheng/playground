@@ -106,12 +106,35 @@ class KtTest {
                     }
                 }
                 raw.isNotBlank() -> {
-                    val sub =  raw.substringBefore("?")+"= findViewById("+id+")"
+                    val sub = raw.substringBefore("?") + "= findViewById(" + id + ")"
                     println(sub)
                 }
             }
             count++
         }
+    }
+
+    fun foo(p1: Int, p2: String? = null) {
+
+    }
+
+    fun foo(p1: Int, p2: Int = 0) {
+
+    }
+
+//    fun List<String>.filterValid(): List<String>{
+//       return this
+//    }
+//    fun List<Int>.filterValid(): List<Int>{
+//        return this
+//    }
+    @Test
+    fun upload() {
+//        foo(1)
+
+//arrayListOf(1).filterValid()
+
+  println(  "${1.inv()} + ${1.inc()}")
     }
 
 }

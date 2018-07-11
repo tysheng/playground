@@ -10,6 +10,7 @@
         android:id="@+id/gameButton"
         android:text="asssd"
         android:padding="30dp"
+        android:autoLink="all"
         android:textColor="@android:color/black"
         android:layout_height="wrap_content">
 

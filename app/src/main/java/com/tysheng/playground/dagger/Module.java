@@ -1,9 +1,9 @@
 package com.tysheng.playground.dagger;
 
+import android.app.Application;
 import android.content.Context;
 
-import javax.inject.Singleton;
-
+import dagger.Binds;
 import dagger.Provides;
 
 /**
@@ -12,22 +12,13 @@ import dagger.Provides;
  * Email: tyshengsx@gmail.com
  */
 @dagger.Module
-public class Module {
-    private final Context mContext;
+public abstract class Module {
 
-    public Module(Context context) {
-        mContext = context;
-    }
-
+    @Binds
+    abstract Context context(Application activity);
 
     @Provides
-    public Context provideContext() {
-        return mContext;
-    }
-
-    @Provides
-    @Singleton
-    public Holder provideHolder() {
+    public static Holder provideHolder() {
         return new Holder();
     }
 

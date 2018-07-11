@@ -14,15 +14,15 @@ import dagger.Provides;
  */
 
 @Module
-public class OracleApplicationModule {
+public abstract class OracleApplicationModule {
     @Provides
-    Application provideApplication(App application) {
+    static Application provideApplication(App application){
         return application;
     }
 
     @Provides
     @Singleton
-    Utils provideUtils() {
+    static Utils provideUtils() {
         return new Utils();
     }
 }

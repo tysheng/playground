@@ -14,6 +14,7 @@ import com.tysheng.playground.dagger.Dagger2Activity;
 import com.tysheng.playground.dao_delete.DeleteActivity;
 import com.tysheng.playground.edittext.EditTextActivity;
 import com.tysheng.playground.edittextstyle.EditTextStyleActivity;
+import com.tysheng.playground.ellipsize.EllipsizeActivity;
 import com.tysheng.playground.imagecache.ImageCacheActivity;
 import com.tysheng.playground.optionbutton.GameActivity;
 import com.tysheng.playground.png.PngActivity;
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     List<Class> mClassList = new ArrayList<>();
 
     {
+        mClassList.add(EllipsizeActivity.class);
+        mClassList.add(MemeberListActivity.class);
         mClassList.add(SupportActivity.class);
         mClassList.add(Dagger2Activity.class);
         mClassList.add(ShaderActivity.class);

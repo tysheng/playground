@@ -71,11 +71,14 @@
         <activity android:name=".unique.UniqueActivity" />
         <activity android:name=".optionbutton.GameActivity" />
         <activity android:name=".anim.AnimActivity" />
-        <activity android:name=".arch.ArchActivity"></activity>
+        <activity android:name=".arch.ArchActivity" />
         <activity android:name=".KtActivity" />
         <activity android:name=".support.SupportActivity" />
+        <activity android:name=".MemeberListActivity" />
 
         <service android:name=".MyService" />
+
+        <activity android:name=".ellipsize.EllipsizeActivity"></activity>
     </application>
 
 </manifest>

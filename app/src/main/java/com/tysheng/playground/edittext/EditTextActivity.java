@@ -3,17 +3,26 @@ package com.tysheng.playground.edittext;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.TextWatcher;
+import android.text.style.BackgroundColorSpan;
 import android.widget.TextView;
 
 import com.tysheng.playground.R;
+
+import timber.log.Timber;
 
 public class EditTextActivity extends AppCompatActivity {
     private AdvanceEditText mEdit1;
     private AdvanceEditText mEdit2;
     private AdvanceEditText mEdit3;
     private AdvanceEditText mEdit4;
+
+    private MyEditText et;
 
 
     @Override
@@ -24,6 +33,26 @@ public class EditTextActivity extends AppCompatActivity {
         mEdit2 = (AdvanceEditText) findViewById(R.id.edit2);
         mEdit3 = (AdvanceEditText) findViewById(R.id.edit3);
         mEdit4 = (AdvanceEditText) findViewById(R.id.edit4);
+        et = findViewById(R.id.et);
+        et.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                Timber.d("beforeTextChanged s %s, start %d, count %d, after %d", s, start, count, after);
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Timber.d("onTextChanged s %s, start %d, before %d, count %d", s, start, before, count);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                Timber.d("afterTextChanged " + s.toString());
+            }
+        });
+        SpannableString spannableString = new SpannableString("asdasdasdasdasdasd23e2323");
+        spannableString.setSpan(new BackgroundColorSpan(Color.RED),2,5, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+        et.setText(spannableString);
 
         mEdit1.setHint("Home address");
 

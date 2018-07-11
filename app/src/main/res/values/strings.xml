@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TestCase</string>
+    <string name="app_name">Playground</string>
     <string name="title_activity_dagger2">Dagger2Activity</string>
     <string name="title_activity_shader">ShaderActivity</string>
     <string name="title_activity_touch">TouchActivity</string>

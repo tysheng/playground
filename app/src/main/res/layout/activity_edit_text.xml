@@ -35,7 +35,10 @@
     </com.tysheng.playground.edittext.AdvanceEditText>
 
 
-    <EditText
+    <com.tysheng.playground.edittext.MyEditText
         android:layout_width="match_parent"
+        android:id="@+id/et"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:layout_height="wrap_content" />
 </LinearLayout>
