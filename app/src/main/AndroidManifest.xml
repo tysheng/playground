@@ -63,7 +63,6 @@
         <activity android:name=".imagecache.ImageCacheActivity" />
         <activity android:name=".png.PngActivity" />
         <activity android:name=".edittext.EditTextActivity" />
-        <activity android:name=".db_image.DBImageActivity" />
         <activity android:name=".rx_broadcast.RxBroadcastActivity" />
         <activity android:name=".edittextstyle.EditTextStyleActivity" />
         <activity android:name=".dao_delete.DeleteActivity" />
@@ -78,7 +77,10 @@
 
         <service android:name=".MyService" />
 
-        <activity android:name=".ellipsize.EllipsizeActivity"></activity>
+        <activity android:name=".ellipsize.EllipsizeActivity" />
+        <activity android:name=".gesture.GestureActivity" />
+        <activity android:name=".textlayout.TextLayoutActivity"></activity>
+        <activity android:name=".sensor.SensorActivity" />
     </application>
 
 </manifest>

@@ -2,6 +2,8 @@ package com.tysheng.playground;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.StatFs;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,6 +17,7 @@ import com.tysheng.playground.dao_delete.DeleteActivity;
 import com.tysheng.playground.edittext.EditTextActivity;
 import com.tysheng.playground.edittextstyle.EditTextStyleActivity;
 import com.tysheng.playground.ellipsize.EllipsizeActivity;
+import com.tysheng.playground.gesture.GestureActivity;
 import com.tysheng.playground.imagecache.ImageCacheActivity;
 import com.tysheng.playground.optionbutton.GameActivity;
 import com.tysheng.playground.png.PngActivity;
@@ -22,9 +25,11 @@ import com.tysheng.playground.rx_broadcast.RxBroadcastActivity;
 import com.tysheng.playground.scroll.ScrollActivity;
 import com.tysheng.playground.scroll_rv.ScrollRvActivity;
 import com.tysheng.playground.selecttextview.SelectTextActivity;
+import com.tysheng.playground.sensor.SensorActivity;
 import com.tysheng.playground.shader.ShaderActivity;
 import com.tysheng.playground.share.ShareActivity;
 import com.tysheng.playground.support.SupportActivity;
+import com.tysheng.playground.textlayout.TextLayoutActivity;
 import com.tysheng.playground.touch.TouchActivity;
 import com.tysheng.playground.unique.UniqueActivity;
 import com.tysheng.playground.watermark.WaterMarkActivity;
@@ -42,6 +47,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     List<Class> mClassList = new ArrayList<>();
 
     {
+        mClassList.add(SensorActivity.class);
+        mClassList.add(TextLayoutActivity.class);
+        mClassList.add(GestureActivity.class);
         mClassList.add(EllipsizeActivity.class);
         mClassList.add(MemeberListActivity.class);
         mClassList.add(SupportActivity.class);
@@ -154,6 +162,36 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 //        } catch (ExecutionException e1) {
 //            e1.printStackTrace();
 //        }
+
+//        File parentDir;
+//        if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())
+//                || !Environment.isExternalStorageRemovable()) {
+//            parentDir = getExternalFilesDir(null);
+//        } else {
+//            parentDir = getFilesDir();
+//        }
+
+        Timber.d("getExternalFilesDir " + getExternalFilesDir(null).getAbsolutePath());
+        Timber.d("getFilesDir " + getFilesDir().getAbsolutePath());
+        Timber.d("getRootDirectory " + Environment.getRootDirectory().getAbsolutePath());
+        calculateStorage(getExternalFilesDir(null).getAbsolutePath());
+        calculateStorage(getCacheDir().getAbsolutePath());
+
+        calculateStorage(Environment.getRootDirectory().getAbsolutePath());
+    }
+
+    private static final long KILOBYTE = 1024;
+
+    public static void calculateStorage(String filePath) {
+//        Environment.getExternalStorageDirectory()
+        StatFs statFs = new StatFs(filePath);
+        long total;
+        long free;
+
+        total = (statFs.getBlockCountLong() * statFs.getBlockSizeLong()) / (KILOBYTE * KILOBYTE);
+        free = (statFs.getAvailableBlocksLong() * statFs.getBlockSizeLong()) / (KILOBYTE * KILOBYTE);
+
+        Timber.d("calculateStorage total " + total + " free " + free);
 
     }
 

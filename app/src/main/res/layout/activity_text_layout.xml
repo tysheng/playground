@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".textlayout.TextLayoutActivity">
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="asd323wd*Returnthebaselineforthespecifiedline(0dhedfllip;getLineCount()-1)*Ifboundsisnotnull,returnthetop,left,right,bottomextents*ofthespecifiedlineinit.*@paramlinewhichlinetoexamine(0..getLineCount()-1)*@paramboundsOptional.Ifnotnull,itreturnstheextentofthelinesdfdsfdfdf*@returntheY-coordinateofthebaseline##scratch##generated##kotlin.Unit" />-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <WebView
+                android:layout_width="match_parent"
+                android:id="@+id/webView"
+                android:layout_height="wrap_content">
+
+            </WebView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="40dp"
+                android:background="@color/colorAccent"
+                android:text="AAA\nbbb"/>
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
